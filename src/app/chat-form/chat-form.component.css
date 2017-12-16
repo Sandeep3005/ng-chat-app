@@ -1,0 +1,12 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-container > * {
+  width: 100%;
+}
+
+#chatInputWrapper {
+  width: 100%;
+}
