@@ -1,19 +1,25 @@
+
 <div class="chat-container">
-  <form (ngSubmit)="onSubmit(chatForm)" #chatForm="ngForm">
+  <form (ngSubmit)="onSubmit()" [formGroup]="chatInputForm">
     <div class="row">
       <div class="col-sm-9">
         <mat-form-field id="chatInputWrapper">
-          <input 
+          <input
+            autofocus
             name="chatInput"
-            matInput 
+            matInput
+            formControlName="chatInput"
             placeholder="Let's talk"
-            ngModel
-            (keydown)="runthis($event, chatForm)"
+            (keydown)="runthis($event)"
           >
         </mat-form-field>
       </div>
       <div class="col-sm-3">
-        <button type="submit" mat-raised-button color="primary">Send</button>
+        <button
+          [disabled]="this.chatInputForm.invalid"
+          type="submit"
+          mat-raised-button
+          color="primary">Send</button>
       </div>
     </div>
   </form>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ChatService } from './../services/chat.service';
 import * as _ from 'underscore';
+
 
 @Component({
   selector: 'app-chat-form',
@@ -10,18 +12,22 @@ import * as _ from 'underscore';
 export class ChatFormComponent implements OnInit {
 
   constructor(private chatService: ChatService) { }
+  chatInputForm: FormGroup;
 
   ngOnInit() {
+    this.chatInputForm = new FormGroup({
+      chatInput: new FormControl('')
+    });
   }
 
-  onSubmit(chatForm) {
-    console.log('hi = ', chatForm);
-    this.chatService.sendMessage(chatForm.value.chatInput)
+  onSubmit() {
+    this.chatService.sendMessage(this.chatInputForm.value.chatInput);
+    this.chatInputForm.reset();
   }
 
-  runthis(event, chatForm) {
+  runthis(event) {
     if (event.keyCode === 15) {
-      this.onSubmit(chatForm);
+      this.onSubmit();
     } 
   }
 

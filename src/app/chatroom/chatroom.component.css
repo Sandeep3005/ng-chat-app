@@ -1,5 +1,8 @@
 .chat-wrapper {
-  margin-top: 5vh;
   font-family: 'Alegreya', serif;
 }
 
+.container {
+  width: 100%;
+  padding-left: 0px;
+}
