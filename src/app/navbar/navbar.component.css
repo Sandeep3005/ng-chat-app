@@ -5,3 +5,16 @@
 .wrapper {
  font-family: 'Bungee', cursive;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+  margin-right: 2vw;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.active {
+ border-bottom: 2px solid;
+}

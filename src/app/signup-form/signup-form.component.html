@@ -1,3 +1,35 @@
-<p>
-  signup-form works!
-</p>
+<div class="center-area">
+  <form novalidate (ngSubmit)="signUp()" [formGroup]="signUpForm">
+    <mat-form-field class="form-field">
+      <input
+        name="email"
+        matInput
+        formControlName="emailInput"
+        placeholder="Email"
+      >
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input
+        name="password"
+        type="password"
+        matInput
+        formControlName="passwordInput"
+        placeholder="password"
+      >
+    </mat-form-field>
+      <mat-form-field class="form-field">
+        <input
+          name="username"
+          matInput
+          formControlName="usernameInput"
+          placeholder="username">
+      </mat-form-field>
+    <div>
+      <button
+        [disabled]="this.signUpForm.invalid"
+        type="submit"
+        mat-raised-button
+        color="primary">Sign Up</button>
+    </div>
+  </form>
+</div>

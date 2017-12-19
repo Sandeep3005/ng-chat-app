@@ -1,0 +1,10 @@
+.center-area {
+  height:75vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.form-field {
+  width: 100%;
+}

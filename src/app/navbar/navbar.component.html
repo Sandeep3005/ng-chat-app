@@ -1,6 +1,20 @@
 <mat-toolbar color="primary" class="wrapper">
-    <span>Chat-Up</span>
+    <a [routerLink]="['/']">Chat-Up</a>
     <span class="fill-remaining-space"></span>
-    <span>Login</span>
+    <a
+      *ngIf="!(user)?.uid"
+      routerLinkActive="active"
+      [routerLink]="['/','login']"
+    >Login</a>
+    <a
+     *ngIf="(user)?.uid"
+     routerLinkActive="active"
+     (click)="logout()"
+     >Logout</a>
+    <a
+      *ngIf="!(user)?.uid"
+      routerLinkActive="active"
+      [routerLink]="['/','signup']"
+    >SignUp</a>
 </mat-toolbar>
 

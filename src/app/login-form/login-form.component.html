@@ -1,3 +1,13 @@
-<p>
-  login-form works!
-</p>
+<div class="center-area">
+  <form novalidate (ngSubmit)="login()" [formGroup]="loginForm">
+    <mat-form-field class="form-field">
+      <input name="email" matInput formControlName="emailInput" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field class="form-field">
+      <input name="password" type="password" matInput formControlName="passwordInput" placeholder="Password">
+    </mat-form-field>
+    <div>
+      <button [disabled]="this.loginForm.invalid" type="submit" mat-raised-button color="primary">Log in</button>
+    </div>
+  </form>
+</div>
