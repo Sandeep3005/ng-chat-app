@@ -1,3 +1,10 @@
-<p>
-  feed works!
-</p>
+<div *ngIf="isLoading; else msg_section" class="spinner-wrapper">
+  <mat-spinner class="main-spinner"></mat-spinner>
+</div>
+<ng-template #msg_section>
+  <div class="feed" >
+    <div *ngFor="let chatMsg of chatMessages" class="message">
+      <app-message [message]="chatMsg"></app-message>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,21 @@
+.spinner-wrapper {
+  text-align: center;
+  min-height: 75vh;
+}
+
+.main-spinner {
+  display: inline-block;
+}
+
+.feed {
+  display: grid;
+  height: 75vh;
+  overflow: scroll;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+
+}

@@ -1,3 +1,8 @@
-<p>
-  message works!
-</p>
+<div class="bubble"
+  [ngClass]="{'you': message.fromMe, 'me': !message.fromMe}">
+  <div>
+    <div class="msg-data">{{message.message}}</div>
+    <small class="msg-meta">{{message.username}}</small>
+    <small class="msg-meta">{{message.fromMe}}</small>
+  </div>
+</div>
