@@ -1,0 +1,22 @@
+div {
+  font-family: 'Play', sans-serif;
+  font-size: 16px;
+}
+
+.user-name {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.user-email {
+  padding-left: 10px;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0;
+  border-top: 1px solid #7d7676;
+  width: 90%;
+}
+

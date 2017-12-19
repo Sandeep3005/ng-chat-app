@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AuthService } from './../services/auth.service';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { User } from '../modals/user.modal';
 
 @Component({
   selector: 'app-user-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private authService:AuthService) { }
+  users: any[] = [];
   ngOnInit() {
+    this.authService.getUsersData().subscribe((res) => {
+      Object.keys(res).forEach((key) => {
+        this.users.push(res[key]);
+      });
+    });
   }
+
 
 }
