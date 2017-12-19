@@ -23,6 +23,8 @@ Clone this repo and install packages with yarn install.
 Right now as the app is in dev mode, I have not shared firebase authentication and API code here.
 Just create a project on firebase and add "Add Firebase to your app" by putting the code in the environment file.
 
+### UI
+![alt text](https://i.imgur.com/60glcJF.png)
 
 ## Further help
 Let me know by raising issue and I will get back to you
