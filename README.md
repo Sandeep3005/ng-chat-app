@@ -1,27 +1,29 @@
-# NgChapApp
+# NgChatApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
-## Development server
+## Chat App
+Public discussion forumv0.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+###Featues
+1. Public discussion using chat
+2. Authentication with firebase
+3. Auth Guard implemented for better security
+4. Fun little app with huge potential.
 
-## Code scaffolding
+###Upcoming Features
+1. Login with basic social system(Facebook, Gmail etc)
+2. Better system to show online user
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#Run
 
-## Build
+Clone this repo and install packages with yarn install.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+###Important
+Right now as the app is in dev mode, I have not shared firebase authentication and API code here.
+Just create a project on firebase and add "Add Firebase to your app" by putting the code in the environment file.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
+Let me know by raising issue and I will get back to you
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
